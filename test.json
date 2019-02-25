@@ -1,0 +1,342 @@
+[
+	{
+		"deployments": 3,
+		"locationName": "Meteorological Station - Davis",
+		"depth": 0.0,
+		"bbox": {
+			"maxDepth": 0.0,
+			"maxLat": 69.114233,
+			"maxLon": -105.058967,
+			"minDepth": 0.0,
+			"minLat": 69.11392,
+			"minLon": -105.0596
+		},
+		"description": "Latitude: 69.1139 Longitude: -105.0596 Type: Stationary platform Description: Instruments mounted on a wood pole above the dock, adjacent to the underwater instruments.",
+		"hasDeviceData": "true",
+		"lon": -105.059389,
+		"locationCode": "CBYSS.M1",
+		"hasPropertyData": "false",
+		"lat": 69.114024,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=CBYSS.M1"
+	},
+	{
+		"deployments": 2,
+		"locationName": "Meteorological Station - Lufft",
+		"depth": 0.0,
+		"bbox": {
+			"maxDepth": 0.0,
+			"maxLat": 69.114233,
+			"maxLon": -105.058967,
+			"minDepth": 0.0,
+			"minLat": 69.11392,
+			"minLon": -105.0596
+		},
+		"description": "Latitude: 69.1139 Longitude: -105.0596 Type: Stationary platform Description: Instruments mounted on a wood pole above the dock, adjacent to the underwater instruments.",
+		"hasDeviceData": "true",
+		"lon": -105.059283,
+		"locationCode": "CBYSS.M2",
+		"hasPropertyData": "false",
+		"lat": 69.114077,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=CBYSS.M2"
+	},
+	{
+		"deployments": 2,
+		"locationName": "Campbell River Shore Station",
+		"depth": -6.0,
+		"bbox": {
+			"maxDepth": -6.0,
+			"maxLat": 50.020867,
+			"maxLon": -125.235367,
+			"minDepth": -6.0,
+			"minLat": 50.020867,
+			"minLon": -125.235367
+		},
+		"description": "Depth: -6 m Latitude: 50.020866666  Longitude: -125.235366666 Type: Stationary platform Description: SMART Oceans Shore Station",
+		"hasDeviceData": "true",
+		"lon": -125.235367,
+		"locationCode": "CRSS",
+		"hasPropertyData": "false",
+		"lat": 50.020867,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=CRSS"
+	},
+	{
+		"deployments": 2,
+		"locationName": "Digby Island Shore Station",
+		"depth": -10.0,
+		"bbox": {
+			"maxDepth": -10.0,
+			"maxLat": 54.263317,
+			"maxLon": -130.42495,
+			"minDepth": -10.0,
+			"minLat": 54.263317,
+			"minLon": -130.42495
+		},
+		"description": "Depth: TBD  Latitude: TBD  Longitude: TBD  Type: Stationary platform Description: TBD ",
+		"hasDeviceData": "true",
+		"lon": -130.42495,
+		"locationCode": "DISS",
+		"hasPropertyData": "false",
+		"lat": 54.263317,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=DISS"
+	},
+	{
+		"deployments": 1,
+		"locationName": "Iona Shore Station",
+		"depth": 0.0,
+		"bbox": {
+			"maxDepth": 0.0,
+			"maxLat": 49.216063,
+			"maxLon": -123.205482,
+			"minDepth": 0.0,
+			"minLat": 49.216063,
+			"minLon": -123.205482
+		},
+		"description": "Depth:0 m Latitude: 49.2160633333 Longitude: -123.2054816667 Type: Stationary Platform Description: Shore Station located in Vancouver, B.C. Data from ocean sensors is transmitted from the shore station to the data archive at the University of Victoria.   A weather station is installed at the Shore Station.",
+		"hasDeviceData": "true",
+		"lon": -123.205482,
+		"locationCode": "IONA",
+		"hasPropertyData": "false",
+		"lat": 49.216063,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=IONA"
+	},
+	{
+		"deployments": 2,
+		"locationName": "Kitamaat Village Shore Station",
+		"depth": -7.0,
+		"bbox": {
+			"maxDepth": -7.0,
+			"maxLat": 53.973217,
+			"maxLon": -128.651417,
+			"minDepth": -7.0,
+			"minLat": 53.973217,
+			"minLon": -128.651417
+		},
+		"description": "Depth: -7 m Latitude: 53.9732167  Longitude: 53.9732167 Type: Stationary platform Description: SMART Oceans Shore Station",
+		"hasDeviceData": "true",
+		"lon": -128.651417,
+		"locationCode": "KVSS",
+		"hasPropertyData": "false",
+		"lat": 53.973217,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=KVSS"
+	},
+	{
+		"deployments": 1,
+		"locationName": "Mill Bay Shore Station",
+		"depth": -5.0,
+		"bbox": {
+			"maxDepth": -5.0,
+			"maxLat": 48.6531,
+			"maxLon": -123.5521,
+			"minDepth": -5.0,
+			"minLat": 48.6531,
+			"minLon": -123.5521
+		},
+		"description": "Depth: -6 m Latitude: 69.1139 Longitude: -105.059 Type: Stationary platform Description: Instruments mounted on a wood pole above the dock, directly above the underwater instruments.",
+		"hasDeviceData": "true",
+		"lon": -123.5521,
+		"locationCode": "MBYSS",
+		"hasPropertyData": "false",
+		"lat": 48.6531,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=MBYSS"
+	},
+	{
+		"deployments": 1,
+		"locationName": "Okeanos Explorer",
+		"depth": 0.0,
+		"bbox": {
+			"maxDepth": 0.0,
+			"maxLat": 20.695237,
+			"maxLon": -68.907936,
+			"minDepth": 0.0,
+			"minLat": 20.695237,
+			"minLon": -68.907936
+		},
+		"description": "Platform: The Okeanos Explorer is operated by NOAA. ",
+		"hasDeviceData": "true",
+		"lon": -68.907936,
+		"locationCode": "OKEX",
+		"hasPropertyData": "false",
+		"lat": 20.695237,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=OKEX"
+	},
+	{
+		"deployments": 1,
+		"locationName": "Port Alice",
+		"depth": -29.0,
+		"bbox": {
+			"maxDepth": -29.0,
+			"maxLat": 50.42855,
+			"maxLon": -127.4865,
+			"minDepth": -29.0,
+			"minLat": 50.42855,
+			"minLon": -127.4865
+		},
+		"description": "Port Alice hosts a weather station and accelerometer in northern Vancouver Island.",
+		"hasDeviceData": "true",
+		"lon": -127.4865,
+		"locationCode": "PALI",
+		"hasPropertyData": "false",
+		"lat": 50.42855,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=PALI"
+	},
+	{
+		"deployments": 2,
+		"locationName": "Port Alberni",
+		"depth": -30.0,
+		"bbox": {
+			"maxDepth": -30.0,
+			"maxLat": 49.2183,
+			"maxLon": -124.8083,
+			"minDepth": -30.0,
+			"minLat": 49.2183,
+			"minLon": -124.8083
+		},
+		"description": "NEPTUNE Canada's Port Alberni shore station is the place where power and communications connections are made between the land and sea portions of our network. It is also one of the Earthquake Early Warning sites with a latitude of 49.25624 and a longitude of -124.86116 and an elevation of approximately 108 metres. ",
+		"hasDeviceData": "true",
+		"lon": -124.8083,
+		"locationCode": "PTAL",
+		"hasPropertyData": "false",
+		"lat": 49.2183,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=PTAL"
+	},
+	{
+		"deployments": 1,
+		"locationName": "Ridley Island Shore Station",
+		"depth": -7.0,
+		"bbox": {
+			"maxDepth": -7.0,
+			"maxLat": 54.234367,
+			"maxLon": -130.3335,
+			"minDepth": -7.0,
+			"minLat": 54.234367,
+			"minLon": -130.3335
+		},
+		"description": "Depth: -7  Latitude: 54.234367 Longitude: -130.3335  Type: Stationary platform Description: SMART Oceans Shore Station",
+		"hasDeviceData": "true",
+		"lon": -130.3335,
+		"locationCode": "RISS",
+		"hasPropertyData": "false",
+		"lat": 54.234367,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=RISS"
+	},
+	{
+		"deployments": 1,
+		"locationName": "Tsawwassen - Duke Point",
+		"depth": 3.0,
+		"bbox": {
+			"maxDepth": 3.0,
+			"maxLat": 49.02318,
+			"maxLon": -123.305824,
+			"minDepth": 3.0,
+			"minLat": 49.02318,
+			"minLon": -123.305824
+		},
+		"description": "Description: Ferry Route that travels between Tsawwassen terminal in Vancouver, BC and the Duke Point terminal, Nanaimo BC.",
+		"hasDeviceData": "true",
+		"lon": -123.305824,
+		"locationCode": "TWDP",
+		"hasPropertyData": "false",
+		"lat": 49.02318,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=TWDP"
+	},
+	{
+		"deployments": 2,
+		"locationName": "Tsawwassen - Swartz Bay",
+		"depth": 3.0,
+		"bbox": {
+			"maxDepth": 3.0,
+			"maxLat": 48.690114,
+			"maxLon": -123.412483,
+			"minDepth": 3.0,
+			"minLat": 48.690114,
+			"minLon": -123.412483
+		},
+		"description": "Description: Ferry Route that travels between Tsawwassen terminal in Vancouver, BC and the Swartz Bay terminal, Victoria BC.",
+		"hasDeviceData": "true",
+		"lon": -123.412483,
+		"locationCode": "TWSB",
+		"hasPropertyData": "false",
+		"lat": 48.690114,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=TWSB"
+	},
+	{
+		"deployments": 1,
+		"locationName": "Kyuquot",
+		"depth": -42.0,
+		"bbox": {
+			"maxDepth": -42.0,
+			"maxLat": 50.032883,
+			"maxLon": -127.373566,
+			"minDepth": -42.0,
+			"minLat": 50.032883,
+			"minLon": -127.373566
+		},
+		"description": "Kyuquot hosts a weather station and accelerometers in northern Vancouver Island.",
+		"hasDeviceData": "true",
+		"lon": -127.373566,
+		"locationCode": "VIK",
+		"hasPropertyData": "false",
+		"lat": 50.032883,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=VIK"
+	},
+	{
+		"deployments": 1,
+		"locationName": "Woss Lake",
+		"depth": -166.0,
+		"bbox": {
+			"maxDepth": -166.0,
+			"maxLat": 50.213267,
+			"maxLon": -126.60195,
+			"minDepth": -166.0,
+			"minLat": 50.213267,
+			"minLon": -126.60195
+		},
+		"description": "Woss Lake hosts a weather station and accelerometer in northern Vancouver Island.",
+		"hasDeviceData": "true",
+		"lon": -126.60195,
+		"locationCode": "WOSB",
+		"hasPropertyData": "false",
+		"lat": 50.213267,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=WOSB"
+	},
+	{
+		"deployments": 1,
+		"locationName": "Instrument Float",
+		"depth": 0.0,
+		"bbox": {
+			"maxDepth": 0.0,
+			"maxLat": 48.622283,
+			"maxLon": -123.498883,
+			"minDepth": 0.0,
+			"minLat": 48.622283,
+			"minLon": -123.498883
+		},
+		"description": "Depth: 195 m Latitude:48.6222833333 Longitude: -123.4988833333 Type: Mobile platform Description: Inshore Profiling System instrument float. ",
+		"hasDeviceData": "true",
+		"lon": -123.498883,
+		"locationCode": "YPVPF",
+		"hasPropertyData": "false",
+		"lat": 48.622283,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=YPVPF"
+	},
+	{
+		"deployments": 1,
+		"locationName": "Zeballos",
+		"depth": -16.0,
+		"bbox": {
+			"maxDepth": -16.0,
+			"maxLat": 49.989683,
+			"maxLon": -126.850617,
+			"minDepth": -16.0,
+			"minLat": 49.989683,
+			"minLon": -126.850617
+		},
+		"description": "Zeballos hosts a weather station and accelerometers in northern Vancouver Island.",
+		"hasDeviceData": "true",
+		"lon": -126.850617,
+		"locationCode": "ZEBA",
+		"hasPropertyData": "false",
+		"lat": 49.989683,
+		"dataSearchURL": "http://data.oceannetworks.ca/DataSearch?location=ZEBA"
+	}
+]
