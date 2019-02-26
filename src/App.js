@@ -8,24 +8,52 @@ import "./css/App.css";
 import "./css/semantic.min.css";
 
 class App extends Component {
-  state = { user: "" };
-  setUser = user => {
-    this.setState({ user: user });
-  };
-  render() {
-    return (
-      <div className="root">
-        <div>
-          <Header
-            logo={logo}
-            user={this.state.user}
-            handleLogout={() => this.setUser("")}
-          />
-          <Container className="semantic" />
-        </div>
-      </div>
-    );
-  }
+	constructor(props) {
+		super(props);
+		this.state = { user: "", location: "CRSS" };
+
+		this.handleLocationChange = this.handleLocationChange.bind(this);
+	}
+
+	handleLocationChange() {
+		if (this.state.location === "CRSS") {
+			console.log("click");
+			this.setState({ location: "DISS" });
+		} else {
+			console.log("clack");
+			this.setState({ location: "CRSS" });
+		}
+	}
+
+	setUser = user => {
+		this.setState({ user: user });
+	};
+
+	setLocation = () => {
+		if (this.state.location === "CRSS") {
+			console.log("click");
+			this.setState({ location: "DISS" });
+		} else {
+			console.log("clack");
+			this.setState({ location: "CRSS" });
+		}
+	};
+
+	render() {
+		return (
+			<div className="root">
+				<div>
+					<Header
+						logo={logo}
+						user={this.state.user}
+						handleLogout={() => this.setUser("")}
+						handleLocationChange={() => this.setLocation()}
+					/>
+					<Container className="semantic" locationCode={this.state.location} />
+				</div>
+			</div>
+		);
+	}
 }
 
 export default App;

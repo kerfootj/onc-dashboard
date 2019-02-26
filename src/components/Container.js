@@ -8,16 +8,58 @@ class Container extends Component {
 	state = {
 		clicked: false,
 		locationCode: "CRSS",
-		sensorCodes: []
+		data: {},
+		sensorCodes: [],
+		loading: true,
+		error: false
 	};
 
 	componentDidMount() {
+		this.getScalarData(this.props.locationCode);
+	}
+
+	componentDidUpdate(prevProps) {
+		if (this.props.locationCode !== prevProps.locationCode) {
+			this.getScalarData(this.props.locationCode);
+		}
+	}
+
+	render() {
+		return (
+			<div className="ui container">
+				{this.state.error && <div>Sorry, couldn't access the Oceans 2.0 API.</div>}
+				<div className="ui padded grid">
+					<Image locationCode={this.state.locationCode} />
+					{this.state.loading && (
+						<div className="ui eight wide column">
+							Loading...
+							<div className="ui inline text loader">Loading your dashboard...</div>
+						</div>
+					)}
+					{Object.keys(this.state.data).map(index => {
+						return (
+							<Chart
+								data={this.state.data[index].data}
+								sensorCode={this.state.data[index].sensorCode}
+								sensorName={this.state.data[index].sensorName}
+								locationCode={this.state.locationCode}
+								unitsOfMeasre={this.state.data[index].unitsOfMeasre}
+								key={this.state.data[index].sensorCode}
+							/>
+						);
+					})}
+				</div>
+			</div>
+		);
+	}
+
+	getScalarData(locationCode) {
 		axios
 			.get("https://data.oceannetworks.ca/api/scalardata", {
 				params: {
 					method: "getByLocation",
-					token: "079f20e6-4fc3-41ab-832e-a42943f59186",
-					locationCode: this.state.locationCode,
+					token: "43b478f3-8f59-41e8-a24b-fa52eb3ad01f",
+					locationCode: locationCode,
 					deviceCategoryCode: "METSTN",
 					outputFormat: "Object",
 					dateFrom: moment()
@@ -29,41 +71,20 @@ class Container extends Component {
 			})
 			.then(response => {
 				console.log(response);
-				Object.keys(response.data.sensorData).map(index => {
-					this.state.sensorCodes[index] = response.data.sensorData[index].sensorCode;
+				this.setState({
+					data: response.data.sensorData,
+					locationCode: locationCode,
+					loading: false
 				});
 			})
 			.catch(error => {
 				console.log(error);
+				this.setState({
+					loading: false,
+					error: true
+				});
 			});
 	}
-
-	render() {
-		return (
-			<div className="ui container">
-				<button onClick={() => this.handleClickLocation()}>
-					{this.state.locationCode}
-				</button>
-				<div className="ui padded grid">
-					<Image />
-					<Chart
-						locationCode={this.state.locationCode}
-						sensorCode={this.state.sensorCodes[2]}
-						key={this.state.sensorCodes[2]}
-					/>
-					);
-				</div>
-			</div>
-		);
-	}
-
-	handleClickLocation = () => {
-		if (this.state.clicked) {
-			this.setState({ locationCode: "CRSS", clicked: false });
-		} else {
-			this.setState({ locationCode: "DISS", clicked: true });
-		}
-	};
 }
 
 export default Container;

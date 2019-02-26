@@ -4,22 +4,28 @@ import moment from "moment";
 import { Line } from "react-chartjs-2";
 
 class Chart extends Component {
-	state = {
-		locationCode: "",
-		data: {},
-		sensorName: "",
-		color: "#420666",
-		loading: true,
-		error: false
-	};
-
-	componentDidMount() {
-		this.getScalarData(this.props.locationCode, this.props.sensorCode);
+	constructor(props) {
+		super(props);
+		this.state = {
+			data: props.data,
+			sensorCode: props.sensorCode,
+			sensorName: props.sensorName,
+			locationCode: props.locationCode,
+			units: props.unitsOfMeasure,
+			color: "#420666",
+			clicked: false
+		};
 	}
 
 	componentDidUpdate(prevProps) {
-		if (this.props.locationCode !== prevProps.locationCode) {
-			this.getScalarData(this.props.locationCode);
+		if (this.props.data !== prevProps.data) {
+			this.setState({
+				data: this.props.data,
+				sensorCode: this.props.sensorCode,
+				sensorName: this.props.sensorName,
+				locationCode: this.props.locationCode,
+				units: this.props.unitsOfMeasure
+			});
 		}
 	}
 
@@ -54,50 +60,10 @@ class Chart extends Component {
 		);
 	}
 
-	getScalarData(locationCode, sensorCode) {
-		axios
-			.get("https://data.oceannetworks.ca/api/scalardata", {
-				params: {
-					method: "getByLocation",
-					token: "079f20e6-4fc3-41ab-832e-a42943f59186",
-					locationCode: locationCode,
-					deviceCategoryCode: "METSTN",
-					sensorCategoryCodes: sensorCode,
-					outputFormat: "Object",
-					dateFrom: moment()
-						.subtract(30, "minutes")
-						.toISOString(),
-					rowLimit: 100
-				},
-				headers: { "content-type": "application/x-www-form-urlencoded" }
-			})
-			.then(response => {
-				// console.log(response);
-				this.setState({
-					locationCode: locationCode,
-					data: response.data.sensorData[0].data,
-					sensorName: response.data.sensorData[0].sensorName,
-					loading: false
-				});
-			})
-			.catch(error => {
-				console.log(error);
-				this.setState({
-					loading: false,
-					error: true
-				});
-			});
-	}
-
 	handleClickColor = () => {
-		this.setState({ color: "ff0000" });
-		this.getScalarData(this.state.locationCode);
+		if (!this.state.clicked) this.setState({ color: "#ff0000", clicked: true });
+		else this.setState({ color: "#420666", clicked: false });
 	};
-
-	// <button onClick={() => this.handleClickLocation()}>Location</button>
-	// handleClickLocation = () => {
-	// 	this.getScalarData("DISS");
-	// };
 }
 
 export default Chart;
