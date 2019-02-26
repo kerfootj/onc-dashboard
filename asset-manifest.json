@@ -1,14 +1,14 @@
 {
-  "main.css": "/onc-dashboard/static/css/main.f9bc9446.chunk.css",
-  "main.js": "/onc-dashboard/static/js/main.887f5787.chunk.js",
-  "main.js.map": "/onc-dashboard/static/js/main.887f5787.chunk.js.map",
+  "main.css": "/onc-dashboard/static/css/main.f1f7c314.chunk.css",
+  "main.js": "/onc-dashboard/static/js/main.050cce82.chunk.js",
+  "main.js.map": "/onc-dashboard/static/js/main.050cce82.chunk.js.map",
   "runtime~main.js": "/onc-dashboard/static/js/runtime~main.c2dbd9b4.js",
   "runtime~main.js.map": "/onc-dashboard/static/js/runtime~main.c2dbd9b4.js.map",
-  "static/js/2.5bf9b2cd.chunk.js": "/onc-dashboard/static/js/2.5bf9b2cd.chunk.js",
-  "static/js/2.5bf9b2cd.chunk.js.map": "/onc-dashboard/static/js/2.5bf9b2cd.chunk.js.map",
+  "static/js/2.89ab15a6.chunk.js": "/onc-dashboard/static/js/2.89ab15a6.chunk.js",
+  "static/js/2.89ab15a6.chunk.js.map": "/onc-dashboard/static/js/2.89ab15a6.chunk.js.map",
   "index.html": "/onc-dashboard/index.html",
-  "precache-manifest.63f86dd292c0545f8fae8c22dabf1125.js": "/onc-dashboard/precache-manifest.63f86dd292c0545f8fae8c22dabf1125.js",
+  "precache-manifest.a8765e4697e0a45bf9e8d623209da358.js": "/onc-dashboard/precache-manifest.a8765e4697e0a45bf9e8d623209da358.js",
   "service-worker.js": "/onc-dashboard/service-worker.js",
-  "static/css/main.f9bc9446.chunk.css.map": "/onc-dashboard/static/css/main.f9bc9446.chunk.css.map",
-  "static/media/logo.svg": "/onc-dashboard/static/media/logo.5d5d9eef.svg"
+  "static/css/main.f1f7c314.chunk.css.map": "/onc-dashboard/static/css/main.f1f7c314.chunk.css.map",
+  "static/media/semantic.min.css": "/onc-dashboard/static/media/outline-icons.ef60a4f6.woff"
 }
