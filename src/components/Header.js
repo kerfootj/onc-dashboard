@@ -5,7 +5,7 @@ class Header extends Component {
 		return (
 			<div className="ui masthead vertical segment">
 				<div className="ui container">
-					<h1 style={{ color: "rgb(77, 179, 208)" }}>ONC Dashboard Prototype</h1>
+					<h1 style={{ color: "rgb(77, 179, 208)" }}>NOT ONC Dashboard Prototype</h1>
 					<div className="ui two column grid">
 						<div className="ui column">
 							<div className="ui compact menu">

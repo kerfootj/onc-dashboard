@@ -27,13 +27,17 @@ class Container extends Component {
 	render() {
 		return (
 			<div className="ui container">
-				{this.state.error && <div>Sorry, couldn't access the Oceans 2.0 API.</div>}
+				{this.state.error && (
+					<div>Sorry, couldn't access the Oceans 2.0 API.</div>
+				)}
 				<div className="ui padded grid">
 					<Image locationCode={this.state.locationCode} />
 					{this.state.loading && (
 						<div className="ui eight wide column">
 							Loading...
-							<div className="ui inline text loader">Loading your dashboard...</div>
+							<div className="ui inline text loader">
+								Loading your dashboard...
+							</div>
 						</div>
 					)}
 					{Object.keys(this.state.data).map(index => {
@@ -43,7 +47,9 @@ class Container extends Component {
 								sensorCode={this.state.data[index].sensorCode}
 								sensorName={this.state.data[index].sensorName}
 								locationCode={this.state.locationCode}
-								unitsOfMeasre={this.state.data[index].unitsOfMeasre}
+								unitsOfMeasre={
+									this.state.data[index].unitsOfMeasre
+								}
 								key={this.state.data[index].sensorCode}
 							/>
 						);

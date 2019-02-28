@@ -17,6 +17,7 @@ class Chart extends Component {
 		};
 	}
 
+	// Try to remove this, not necessary...
 	componentDidUpdate(prevProps) {
 		if (this.props.data !== prevProps.data) {
 			this.setState({
