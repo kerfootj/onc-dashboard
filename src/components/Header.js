@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import DropdownLocations from "./DropdownLocations";
 
 class Header extends Component {
 	render() {
 		return (
 			<div className="ui masthead vertical segment">
 				<div className="ui container">
-					<h1 style={{ color: "rgb(77, 179, 208)" }}>NOT ONC Dashboard Prototype</h1>
+					<h1 style={{ color: "rgb(77, 179, 208)" }}> ONC Dashboard Prototype</h1>
 					<div className="ui two column grid">
 						<div className="ui column">
 							<div className="ui compact menu">
@@ -16,12 +17,10 @@ class Header extends Component {
 						</div>
 						<div className="ui right aligned column">
 							<div className="ui compact menu">
-								<div
-									onClick={this.props.handleLocationChange}
-									className="ui link item"
-								>
-									Location
-								</div>
+								<DropdownLocations
+									locationOptions={this.props.locationOptions}
+									handleChangeLocation={this.props.handleChangeLocation}
+								/>
 								<div onClick={this.props.handleLogout} className="ui link item">
 									Logout
 								</div>

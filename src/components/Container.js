@@ -6,10 +6,10 @@ import Image from "./Image";
 
 class Container extends Component {
 	state = {
-		clicked: false,
-		locationCode: "CRSS",
+		locationCode: "",
 		data: {},
 		sensorCodes: [],
+		clicked: false,
 		loading: true,
 		error: false
 	};
@@ -27,33 +27,33 @@ class Container extends Component {
 	render() {
 		return (
 			<div className="ui container">
-				{this.state.error && (
-					<div>Sorry, couldn't access the Oceans 2.0 API.</div>
-				)}
 				<div className="ui padded grid">
-					<Image locationCode={this.state.locationCode} />
-					{this.state.loading && (
-						<div className="ui eight wide column">
-							Loading...
-							<div className="ui inline text loader">
-								Loading your dashboard...
-							</div>
-						</div>
+					{this.state.error && <div>Sorrty couldn't find any data for this location</div>}
+					{!this.state.error && (
+						<React.Fragment>
+							<Image locationCode={this.state.locationCode} />
+							{this.state.loading && (
+								<div className="ui eight wide column">
+									Loading...
+									<div className="ui inline text loader">
+										Loading your dashboard...
+									</div>
+								</div>
+							)}
+							{Object.keys(this.state.data).map(index => {
+								return (
+									<Chart
+										data={this.state.data[index].data}
+										sensorCode={this.state.data[index].sensorCode}
+										sensorName={this.state.data[index].sensorName}
+										locationCode={this.state.locationCode}
+										unitsOfMeasre={this.state.data[index].unitsOfMeasre}
+										key={this.state.data[index].sensorCode}
+									/>
+								);
+							})}
+						</React.Fragment>
 					)}
-					{Object.keys(this.state.data).map(index => {
-						return (
-							<Chart
-								data={this.state.data[index].data}
-								sensorCode={this.state.data[index].sensorCode}
-								sensorName={this.state.data[index].sensorName}
-								locationCode={this.state.locationCode}
-								unitsOfMeasre={
-									this.state.data[index].unitsOfMeasre
-								}
-								key={this.state.data[index].sensorCode}
-							/>
-						);
-					})}
 				</div>
 			</div>
 		);
@@ -61,26 +61,34 @@ class Container extends Component {
 
 	getScalarData(locationCode) {
 		axios
-			.get("https://data.oceannetworks.ca/api/scalardata", {
-				params: {
-					method: "getByLocation",
-					token: "43b478f3-8f59-41e8-a24b-fa52eb3ad01f",
-					locationCode: locationCode,
-					deviceCategoryCode: "METSTN",
-					outputFormat: "Object",
-					dateFrom: moment()
-						.subtract(30, "minutes")
-						.toISOString(),
-					rowLimit: 100
-				},
-				headers: { "content-type": "application/x-www-form-urlencoded" }
-			})
+			.get(
+				"https://cors-anywhere.herokuapp.com/https://data.oceannetworks.ca/api/scalardata",
+				{
+					params: {
+						method: "getByLocation",
+						token: "43b478f3-8f59-41e8-a24b-fa52eb3ad01f",
+						locationCode: locationCode,
+						deviceCategoryCode: "METSTN",
+						outputFormat: "Object",
+						dateFrom: moment()
+							.subtract(30, "minutes")
+							.toISOString(),
+						rowLimit: 100
+					},
+					headers: { "content-type": "application/x-www-form-urlencoded" }
+				}
+			)
 			.then(response => {
 				console.log(response);
+				let error = false;
+				if (response.data.sensorData === null) {
+					error = true;
+				}
 				this.setState({
 					data: response.data.sensorData,
 					locationCode: locationCode,
-					loading: false
+					loading: false,
+					error: error
 				});
 			})
 			.catch(error => {

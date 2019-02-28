@@ -9,9 +9,7 @@ import "./css/semantic.min.css";
 class App extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { user: "", location: "", locationCodes: [] };
-
-		this.handleLocationChange = this.handleLocationChange.bind(this);
+		this.state = { user: "", location: "select", locationCodes: [] };
 	}
 
 	componentDidMount() {
@@ -24,54 +22,46 @@ class App extends Component {
 				<div>
 					<Header
 						logo={logo}
+						locationOptions={this.state.locationCodes}
 						user={this.state.user}
 						handleLogout={() => this.setUser("")}
-						handleLocationChange={() => this.setLocation()}
+						handleChangeLocation={this.handleChangeLocation}
 					/>
-					<Container
-						className="semantic"
-						locationCode={this.state.location}
-					/>
+					{this.state.location === "select" && (
+						<div>Select a location from the dropdown to get started</div>
+					)}
+					{this.state.location !== "select" && (
+						<Container className="semantic" locationCode={this.state.location} />
+					)}
 				</div>
 			</div>
 		);
 	}
 
-	handleLocationChange() {
-		if (this.state.location === "CRSS") {
-			console.log("click");
-			this.setState({ location: "DISS" });
-		} else {
-			console.log("clack");
-			this.setState({ location: "CRSS" });
-		}
-	}
+	handleChangeLocation = (event, data) => {
+		console.log(data.value);
+		this.setState({ location: data.value });
+	};
 
 	setUser = user => {
 		this.setState({ user: user });
-	};
-
-	setLocation = () => {
-		let index = this.state.index;
-		index = (index + 1) % this.state.locationCodes.length;
-		this.setState({
-			index: index,
-			location: this.state.locationCodes[index]
-		});
 	};
 
 	// https://data.oceannetworks.ca/api/locations?method=get&token=079f20e6-4fc3-41ab-832e-a42943f59186&
 
 	getlocationCodes() {
 		axios
-			.get("https://data.oceannetworks.ca/api/locations", {
-				params: {
-					method: "get",
-					token: "43b478f3-8f59-41e8-a24b-fa52eb3ad01f",
-					deviceCategoryCode: "METSTN"
-				},
-				headers: { "content-type": "application/x-www-form-urlencoded" }
-			})
+			.get(
+				"https://cors-anywhere.herokuapp.com/https://data.oceannetworks.ca/api/locations",
+				{
+					params: {
+						method: "get",
+						token: "43b478f3-8f59-41e8-a24b-fa52eb3ad01f",
+						deviceCategoryCode: "METSTN"
+					},
+					headers: { "content-type": "application/x-www-form-urlencoded" }
+				}
+			)
 			.then(response => {
 				console.log(response);
 				let locationCodes = [];
@@ -80,19 +70,12 @@ class App extends Component {
 					locationCodes[index] = response.data[index].locationCode;
 				});
 
-				// console.log(locationCodes);
 				this.setState({
-					index: 0,
-					location: locationCodes[0],
 					locationCodes: locationCodes
 				});
 			})
 			.catch(error => {
 				console.log(error);
-				// this.setState({
-				// 	loading: false,
-				// 	error: true
-				// });
 			});
 	}
 }
