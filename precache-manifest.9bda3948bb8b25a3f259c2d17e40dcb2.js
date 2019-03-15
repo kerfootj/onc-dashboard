@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/onc-dashboard/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "fa220a9967ee76cc748d",
+    "revision": "d1a8d728e3c1ff3c7f81",
     "url": "/onc-dashboard/static/css/main.0aab826b.chunk.css"
   },
   {
@@ -20,12 +20,12 @@ self.__precacheManifest = [
     "url": "/onc-dashboard/static/media/flags.9c74e172.png"
   },
   {
-    "revision": "cd6c777f1945164224dee082abaea03a",
-    "url": "/onc-dashboard/static/media/outline-icons.cd6c777f.woff2"
-  },
-  {
     "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
     "url": "/onc-dashboard/static/media/outline-icons.ef60a4f6.woff"
+  },
+  {
+    "revision": "cd6c777f1945164224dee082abaea03a",
+    "url": "/onc-dashboard/static/media/outline-icons.cd6c777f.woff2"
   },
   {
     "revision": "701ae6abd4719e9c2ada3535a497b341",
@@ -40,8 +40,8 @@ self.__precacheManifest = [
     "url": "/onc-dashboard/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "fa220a9967ee76cc748d",
-    "url": "/onc-dashboard/static/js/main.fa220a99.chunk.js"
+    "revision": "d1a8d728e3c1ff3c7f81",
+    "url": "/onc-dashboard/static/js/main.d1a8d728.chunk.js"
   },
   {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
@@ -64,12 +64,12 @@ self.__precacheManifest = [
     "url": "/onc-dashboard/static/media/brand-icons.13db00b7.eot"
   },
   {
-    "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
-    "url": "/onc-dashboard/static/media/brand-icons.c5ebe0b3.ttf"
-  },
-  {
     "revision": "b551b554a67e86a840bc80cbb8066c30",
     "url": "/onc-dashboard/static/media/outline-icons.b551b554.svg"
+  },
+  {
+    "revision": "c5ebe0b32dc1b5cc449a76c4204d13bb",
+    "url": "/onc-dashboard/static/media/brand-icons.c5ebe0b3.ttf"
   },
   {
     "revision": "448f2aaa315fa9dce7b2cf6ce31caed6",
@@ -80,7 +80,7 @@ self.__precacheManifest = [
     "url": "/onc-dashboard/static/media/brand-icons.65363c4d.svg"
   },
   {
-    "revision": "da8a62aa6fcc776de6cca587c3032b47",
+    "revision": "f987d883629a8be9c96f38848c1c101e",
     "url": "/onc-dashboard/index.html"
   }
 ];

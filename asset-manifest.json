@@ -1,13 +1,13 @@
 {
   "main.css": "/onc-dashboard/static/css/main.0aab826b.chunk.css",
-  "main.js": "/onc-dashboard/static/js/main.fa220a99.chunk.js",
-  "main.js.map": "/onc-dashboard/static/js/main.fa220a99.chunk.js.map",
+  "main.js": "/onc-dashboard/static/js/main.d1a8d728.chunk.js",
+  "main.js.map": "/onc-dashboard/static/js/main.d1a8d728.chunk.js.map",
   "runtime~main.js": "/onc-dashboard/static/js/runtime~main.c2dbd9b4.js",
   "runtime~main.js.map": "/onc-dashboard/static/js/runtime~main.c2dbd9b4.js.map",
   "static/js/2.0e2db0a0.chunk.js": "/onc-dashboard/static/js/2.0e2db0a0.chunk.js",
   "static/js/2.0e2db0a0.chunk.js.map": "/onc-dashboard/static/js/2.0e2db0a0.chunk.js.map",
   "index.html": "/onc-dashboard/index.html",
-  "precache-manifest.8d79ebaa6bd68e115b7bc1bef551ef50.js": "/onc-dashboard/precache-manifest.8d79ebaa6bd68e115b7bc1bef551ef50.js",
+  "precache-manifest.9bda3948bb8b25a3f259c2d17e40dcb2.js": "/onc-dashboard/precache-manifest.9bda3948bb8b25a3f259c2d17e40dcb2.js",
   "service-worker.js": "/onc-dashboard/service-worker.js",
   "static/css/main.0aab826b.chunk.css.map": "/onc-dashboard/static/css/main.0aab826b.chunk.css.map",
   "static/media/semantic.min.css": "/onc-dashboard/static/media/outline-icons.ef60a4f6.woff"
